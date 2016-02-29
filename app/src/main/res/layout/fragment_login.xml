@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".modules.login_register.login.FragmentLogin">
+
+    <TextView
+        android:id="@+id/tvLabelUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:text="@string/TaiKhoan" />
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvLabelUsername"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:hint="Nhập tên tài khoản"
+        android:inputType="text"
+        android:maxLines="1" />
+
+    <TextView
+        android:id="@+id/tvLabelPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etUsername"
+
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/padding"
+        android:text="@string/MatKhau" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvLabelPassword"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:hint="Nhập tên mật khẩu"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/tvFogotPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/etPassword"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/padding"
+        android:text="Lấy lại mật khẩu" />
+
+    <RelativeLayout
+        android:id="@+id/layoutOther"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvFogotPass"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/padding"
+        android:layout_marginBottom="@dimen/padding">
+
+        <TextView
+            android:id="@+id/tvLabelOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/Khac" />
+
+        <View
+            style="@style/VerticalLine"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/padding"
+            android:layout_toLeftOf="@id/tvLabelOther" />
+
+        <View
+            style="@style/VerticalLine"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/padding"
+            android:layout_toRightOf="@id/tvLabelOther" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/pivotCenter"
+        android:layout_width="50dp"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/imgGooglePlus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_launcher"
+        android:layout_below="@id/layoutOther"
+        android:layout_toLeftOf="@id/pivotCenter"/>
+
+    <ImageView
+        android:id="@+id/imgFacebook"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_launcher"
+        android:layout_below="@id/layoutOther"
+        android:layout_toRightOf="@id/pivotCenter"/>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/DangNhap"
+        style="@style/GreenButton"/>
+</RelativeLayout>
